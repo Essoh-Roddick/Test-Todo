@@ -1,10 +1,10 @@
-
-
 body {
   font-family: Arial, sans-serif;
   margin: 0;
-  padding: 20px;
-  background: #f4f4f4;
+  padding: 2px;
+  background: #f7f5f5;
+  display: flex;
+    flex-direction: column;
 }
 
 header, footer {
@@ -28,13 +28,27 @@ main {
 }
 
 #todoList li {
-  padding: 8px;
-  margin: 5px 0;
-  background: #eee;
-  display: flex;
+  display: flex;               /* text + button side by side */
   justify-content: space-between;
+  align-items: center;
+  background: #eee;
+  margin: 5px 0;
+  padding: 8px;
+  border-radius: 4px;
 }
 
-button {
-  margin-left: 5px;
+.task-text {
+  flex: 1;                     /* take available space */
+  overflow-x: auto;            /* scroll horizontally if too long */
+  white-space: nowrap;         /* prevent wrapping */
+}
+
+.delete-btn {
+  margin-left: 10px;
+  background: #ff4d4d;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 4px;
 }
